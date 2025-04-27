@@ -1,4 +1,7 @@
 local map = vim.keymap.set
+local default_opts = {noremap = true}
+
+map('n', '<leader>ff', "<cmd>lua require'telescope.builtin'.find_files({ find_command = {'rg', '--files', '--hidden', '-g', '!.git' }})<cr>", default_opts)
 
 map("n", "<Tab>", "<Cmd>BufferLineCycleNext<CR>")
 map("n", "<S-Tab>", "<Cmd>BufferLineCyclePrev<CR>")
@@ -14,11 +17,6 @@ map("n", "<A-Left>", "<C-w>h", { desc = "Move to left split" })
 map("n", "<A-Down>", "<C-w>j", { desc = "Move to bottom split" })
 map("n", "<A-Up>", "<C-w>k", { desc = "Move to top split" })
 map("n", "<A-Right>", "<C-w>l", { desc = "Move to right split" })
-
--- Copilot Chat buffer
-map("n", "<A-c>", vim.cmd.CopilotChatToggle)
-map("i", "<A-c>", vim.cmd.CopilotChatToggle)
-map("v", "<A-c>", vim.cmd.CopilotChatToggle)
 
 map('n', '<leader>e', vim.cmd.NvimTreeToggle)
 -- map('n', '<leader>e', function() Snacks.explorer() end)

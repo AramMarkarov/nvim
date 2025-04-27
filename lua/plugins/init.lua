@@ -1,11 +1,27 @@
 return {
     {
+    "nvim-neorg/neorg",
+        lazy = false,
+        version = "*",
+        config = true,
+    },
+    {
+        "roobert/tailwindcss-colorizer-cmp.nvim",
+    },
+    {
+        'vyfor/cord.nvim',
+        build = ':Cord update',
+    },
+    {
+        "rose-pine/neovim",
+        name = "rose-pine",
+    },
+    {
         "nvim-treesitter/nvim-treesitter",
         config = function()
             require("config.treesitter")
         end,
     },
-
     {
         "rmagatti/auto-session",
         config = function()
@@ -16,9 +32,6 @@ return {
         "neoclide/coc.nvim",
         branch = 'release',
     },
-    -- {
-    --     "sainnhe/gruvbox-material",
-    -- },
     {
         "olimorris/onedarkpro.nvim",
         config = function()
@@ -54,9 +67,6 @@ return {
             require("config.barbar")
         end,
     },
-    -- {
-    --     "itchyny/lightline.vim",
-    -- },
     {
         "nvim-lualine/lualine.nvim",
         event = "VeryLazy",
@@ -73,15 +83,6 @@ return {
             require("config.undotree")
         end,
     },
-    -- {
-    --     "lukas-reineke/indent-blankline.nvim",
-    --     main = "ibl",
-    --     ---@module "ibl"
-    --     ---@type ibl.config
-    --     config = function()
-    --         require("config.indent-blankline")
-    --     end,
-    -- },
     {
         "hiphish/rainbow-delimiters.nvim",
     },
@@ -108,17 +109,6 @@ return {
         event = "InsertEnter",
         config = function()
             require "config.copilot"
-        end,
-    },
-    {
-        "CopilotC-Nvim/CopilotChat.nvim",
-        dependencies = {
-            { "zbirenbaum/copilot.lua" }, -- or zbirenbaum/copilot.lua
-            { "nvim-lua/plenary.nvim", branch = "master" }, -- for curl, log and async functions
-        },
-        build = "make tiktoken", -- Only on MacOS or Linux
-        config = function()
-            require "config.copilotchat"
         end,
     },
     {
