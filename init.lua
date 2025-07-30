@@ -13,12 +13,4 @@ vim.filetype.add({
 })
 
 vim.cmd[[colorscheme catppuccin]]
---if time >= 8 and time < 20 then
---    vim.o.background = "light"
---    vim.cmd[[colorscheme rose-pine-dawn]]
---else
---    vim.o.background = "dark"
---    vim.cmd[[colorscheme rose-pine-moon]]
---end
-
 local bg_color = vim.api.nvim_get_hl_by_name('Normal', true).background

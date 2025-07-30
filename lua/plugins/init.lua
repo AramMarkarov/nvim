@@ -1,6 +1,6 @@
 return {
     {
-    "nvim-neorg/neorg",
+        "nvim-neorg/neorg",
         lazy = false,
         version = "*",
         config = true,
@@ -11,10 +11,6 @@ return {
     {
         'vyfor/cord.nvim',
         build = ':Cord update',
-    },
-    {
-        "rose-pine/neovim",
-        name = "rose-pine",
     },
     {
         "nvim-treesitter/nvim-treesitter",
